@@ -1,0 +1,9 @@
+<IfModule mod_rewrite.c>
+	RewriteEngine On
+
+	RewriteRule ^/?$ ./views/index.php [NC,L]
+	RewriteRule ^create/?$ ./views/create.php [NC,L]
+	RewriteRule ^update/(.+)/?$ ./views/update.php?id=$1 [NC,L]
+
+	Options -Indexes
+</IfModule>
